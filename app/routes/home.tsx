@@ -1,4 +1,4 @@
-import { Welcome } from "~/welcome/welcome.tsx";
+import { Navbar } from "~/components/navbar.tsx"
 import type { Route } from "./+types/home.ts";
 
 export function meta({}: Route.MetaArgs) {
@@ -10,12 +10,15 @@ export function meta({}: Route.MetaArgs) {
 
 export function loader() {
   return {
-    message: `Hello from Deno ${
-      Deno.version.deno ? `v${Deno.version.deno}` : "Deploy"
-    }`,
+    message: "",
   };
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+  return (
+    <div>
+    <Navbar />
+    <p>{loaderData.message}</p>
+    </div>
+  )
 }
