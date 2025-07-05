@@ -19,8 +19,9 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     <div>
     <Navbar />
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <img src="/images/sfm_30-1.png" className="absolute opacity-20 w-1/2 h-auto pointer-events-none" style={{top: '15%', left: '30%'}} />
+      <img src="/images/sfm_30-1.png" className="absolute opacity-20 w-1/2 h-auto pointer-events-none"  />
     </div>
+    <h1 className="text-fuchsia-700">Manifiesto:</h1>
     <p>{loaderData.message}</p>
     </div>
   )
