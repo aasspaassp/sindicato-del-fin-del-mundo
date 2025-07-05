@@ -1,13 +1,15 @@
+import CenterTopImage from "./CenterTopImage.tsx";
+
 export function Navbar() {
   return (
-    <nav className="flex justify-between items-center p-4">
-      <div className="font-bold">SFM</div>
-      <div className="flex gap-4">
-        <a href="/">Conoce al SFM</a>
-        <a href="/estructura">Estructura</a>
-        <a href="/difusion">Difusión</a>
-        <a href="/educacion">Educación</a>
-        <a href="/contacto">Contacto</a>
+    <nav className="flex flex-col items-center p-4 gap-4 rounded-full bg-radial from-pink-400 from-40% to-fuchsia-700">
+      <CenterTopImage />
+      <div className="flex gap-6 justify-center">
+        <a className='hover:underline' href="/conoce">Conoce al SFM</a>
+        <a className='hover:underline' href="/estructura">Estructura</a>
+        <a className='hover:underline' href="/difusion">Difusión</a>
+        <a className='hover:underline' href="/educacion">Educación</a>
+        <a className='hover:underline' href="/contacto">Contacto</a>
       </div>
     </nav>
   );

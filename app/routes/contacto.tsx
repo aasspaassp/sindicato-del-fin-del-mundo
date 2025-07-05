@@ -1,3 +1,3 @@
-export function Contacto () {
+export default function Contacto () {
     return <div>Conoce el SFM</div>
 } 

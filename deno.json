@@ -7,24 +7,46 @@
     "start": "deno run -A ./server.production.ts",
     "typecheck": {
       "command": "deno check --node-modules-dir=auto '**/*'",
-      "dependencies": ["typegen"]
+      "dependencies": [
+        "typegen"
+      ]
     },
     "typegen": "react-router typegen"
   },
   "compilerOptions": {
-    "lib": ["deno.window", "dom"],
+    "lib": [
+      "deno.window",
+      "dom"
+    ],
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "jsxImportSourceTypes": "@types/react",
-    "rootDirs": [".", "./.react-router/types"],
-    "types": ["vite/client"]
+    "rootDirs": [
+      ".",
+      "./.react-router/types"
+    ],
+    "types": [
+      "vite/client"
+    ]
   },
-  "unstable": ["sloppy-imports"],
-  "exclude": ["build/"],
+  "unstable": [
+    "sloppy-imports"
+  ],
+  "exclude": [
+    "build/"
+  ],
   "nodeModulesDir": "manual",
   "imports": {
     "~/": "./app/",
     "@std/http": "jsr:@std/http@^1.0.11",
     "@std/path": "jsr:@std/path@^1.0.8"
+  },
+  "deploy": {
+    "project": "32d51b59-5580-4f17-8156-72adbd962968",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "server.production.ts"
   }
 }

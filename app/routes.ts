@@ -6,9 +6,9 @@ import {
 
 export default [
   index("routes/home.tsx"),
-  route("Conoce al SFM", "routes/conoce.tsx"),
-  route("Estructura", "routes/estructura.tsx"),
-  route("Difusión", "routes/difusion.tsx"),
-  route("Educación", "routes/educacion.tsx"),
-  route("Contacto", "routes/contacto.tsx"),
+  route("conoce", "routes/conoce.tsx"),
+  route("estructura", "routes/estructura.tsx"),
+  route("difusión", "routes/difusion.tsx"),
+  route("educacion", "routes/educacion.tsx"),
+  route("contacto", "routes/contacto.tsx"),
 ] satisfies RouteConfig;
