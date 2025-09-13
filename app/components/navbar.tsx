@@ -1,15 +1,14 @@
-import CenterTopImage from "./CenterTopImage.tsx";
-
 export function Navbar() {
   return (
-    <nav className="flex flex-col items-center p-4 gap-4 rounded-full bg-radial from-pink-400 from-40% to-fuchsia-700 border-b-4 border-black border-t-4 border-black">
-      <CenterTopImage />
-      <div className="flex gap-6 justify-center">
-        <a className='hover:underline' href="/conoce">Conoce al SFM</a>
-        <a className='hover:underline' href="/estructura">Estructura</a>
-        <a className='hover:underline' href="/difusion">Difusión</a>
-        <a className='hover:underline' href="/educacion">Educación</a>
-        <a className='hover:underline' href="/contacto">Contacto</a>
+    <nav className="flex justify-center p-5 gap-4 bg-linear-to-tl from-purple-950 from-80% to-pink-300">
+      
+      <div className="flex flex-col md:flex-row gap-10">
+        <a href="/" className='font-sfm  text-pink-100 hover:text-purple-500'>SFM</a>
+        <a className='font-sfm  text-pink-100 hover:text-purple-500' href="/conoce">Nosotrxs</a>
+        <a className='font-sfm text-pink-100 hover:text-purple-500' href="/estructura">Estructura</a>
+        <a className='font-sfm  text-pink-100 hover:text-purple-500' href="/difusion">Difusión</a>
+        <a className='font-sfm  text-pink-100 hover:text-purple-500' href="/educacion">Educación</a>
+        <a className='font-sfm  text-pink-100 hover:text-purple-500' href="/contacto">Contacto</a>
       </div>
     </nav>
   );

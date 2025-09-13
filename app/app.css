@@ -1,10 +1,19 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Sfm';
+  src: url('/fonts/BrandNewRetroItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme {
   --font-sans:
     "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sfm: "Sfm", sans-serif;
 }
+
 
 html,
 body {

@@ -7,6 +7,10 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { useEffect, useState } from 'react';
+
+import { Navbar } from "~/components/navbar.tsx"
+
 import type { Route } from "./+types/root.ts";
 import "./app.css";
 
@@ -24,7 +28,25 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+function useIsMobile(breakpoint = 640) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < breakpoint);
+    };
+
+    checkScreenSize(); // initial check
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const isMobile = useIsMobile();
   return (
     <html lang="en">
       <head>
@@ -34,7 +56,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Navbar ></Navbar>
+        {!isMobile && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-130">
+          <img src="/images/sfm2222.jpg" className="absolute opacity-20 w-1/2 h-auto pointer-events-none" />
+        </div>)}
         {children}
+        
         <ScrollRestoration />
         <Scripts />
       </body>

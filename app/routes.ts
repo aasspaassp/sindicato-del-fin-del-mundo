@@ -8,7 +8,7 @@ export default [
   index("routes/home.tsx"),
   route("conoce", "routes/conoce.tsx"),
   route("estructura", "routes/estructura.tsx"),
-  route("difusión", "routes/difusion.tsx"),
+  route("difusion", "routes/difusion.tsx"),
   route("educacion", "routes/educacion.tsx"),
   route("contacto", "routes/contacto.tsx"),
 ] satisfies RouteConfig;

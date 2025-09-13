@@ -1,28 +1,18 @@
-import { Navbar } from "~/components/navbar.tsx"
 import type { Route } from "./+types/home.ts";
+import HomeAnimations from "../components/homeAnimation.tsx";
 
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "SFM" },
-    { name: "description", content: "Welcome to React Router!" },
+    { name: "description", content: "Sindicato del Fin del Mundo" },
   ];
 }
 
-export function loader() {
-  return {
-    message: "",
-  };
-}
 
 export default function Home({ loaderData }: Route.ComponentProps) {
   return (
     <div>
-    <Navbar />
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <img src="/images/sfm_30-1.png" className="absolute opacity-20 w-1/2 h-auto pointer-events-none"  />
-    </div>
-    <h1 className="text-fuchsia-700">Manifiesto:</h1>
-    <p>{loaderData.message}</p>
+    <HomeAnimations></HomeAnimations>
     </div>
   )
 }
