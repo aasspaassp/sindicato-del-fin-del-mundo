@@ -1,6 +1,6 @@
 export function Navbar() {
   return (
-    <nav className="flex justify-center p-5 gap-4 bg-linear-to-tl from-purple-950 from-80% to-pink-300">
+    <nav className="flex justify-center p-5 gap-4 bg-linear-to-tl from-purple-900 from-80% to-pink-300">
       
       <div className="flex flex-col md:flex-row gap-10">
         <a href="/" className='font-sfm  text-pink-100 hover:text-purple-500'>SFM</a>
